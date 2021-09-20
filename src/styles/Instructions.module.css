@@ -1,0 +1,21 @@
+.stepBox{
+    position: relative;
+
+}
+
+.boxDot{
+    position: absolute;
+    background: #466033;
+    height:10px;
+    width: 10px;
+    border-radius: 50%;
+    left:-5px;
+}
+
+.headerText{
+    position: absolute;
+    top: -8px;
+    left:20px;
+    right:0;
+    width:90%
+}

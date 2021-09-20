@@ -1,0 +1,64 @@
+.imgBackdrop{
+    position: fixed;
+    top:-40px;
+    height:340px
+}
+
+.imgBackdrop img{
+    width: 100vw !important;
+    height:340px
+}
+
+.foodName{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    height:340px;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    color:white
+}
+
+.navBox{
+    position: absolute;
+    z-index: 300;
+    left:0;
+    right:0;
+}
+
+.imgForedrop{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:250px;
+    background: #212121;
+    z-index: 100;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    z-index:200;
+    min-height: 100vh;
+}
+
+.selected{
+    color:white !important;
+    border-color: white !important;
+}
+
+.selected,.default{
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background:none !important;
+}
+
+.default{
+    color:#626262 !important;
+    border-color: #626262 !important;
+    
+}

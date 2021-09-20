@@ -1,0 +1,40 @@
+.plusRadius{
+    border-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.minusRadius{
+    border-radius: 20px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.servingsBox{
+    position: relative;
+}
+
+.servingQuantity{
+    position: absolute;
+    top:-8px;
+    right:-8px;
+    border-radius: 20px;
+    width:20px;
+    height: 20px;
+    background:#466033 !important;
+    padding:3px;
+    z-index: 50000;
+}
+
+.servingQuantity h2{
+    position: absolute;
+    top:1px;
+    right:6px;
+    color: white;
+}
+
+.imgStyles{
+    height: 40px;
+    width:40px;
+    border-radius: 5px;
+}
