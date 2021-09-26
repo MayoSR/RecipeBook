@@ -14,6 +14,8 @@ import Summary from './components/subcomponents/Summary';
 import Ingredients from './components/subcomponents/Ingredients';
 import Instructions from './components/subcomponents/Instructions';
 import NutritionTable from './components/subcomponents/NutritionTable';
+import Profile from './components/Profile';
+import FridgeContents from './components/FridgeContents';
 
 function App() {
 
@@ -30,6 +32,12 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/cooking">
+            <FridgeContents />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
           </Route>
           <Route path="/recipe/about">
             <Recipe component={<Summary />} />

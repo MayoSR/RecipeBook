@@ -50,14 +50,14 @@ export default function Recipe(props) {
             </div>
             <div className={classes.imgBackdrop}>
                 <Box>
-                    <img src="/images/ramen.jfif" alt="ramen" />
+                    <img src="/images/bacon.jfif" alt="ramen" />
                 </Box>
                 <Box className={classes.foodName}>
                     <Heading>Bacon and Eggs</Heading>
                 </Box>
             </div>
             <div className={classes.imgForedrop}>
-                <Box bg="#212121" borderTopRadius="30px" mt={3}>
+                <Box bg="#f5f5f5" borderTopRadius="30px" mt={3}>
                     <Grid templateColumns="repeat(4, 1fr)" rowGap={5} p={3}>
                         {["About", "Ingredients", "Prepare","Nutrition"].map((tab) => {
                             return (

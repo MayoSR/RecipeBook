@@ -22,11 +22,11 @@ import NutritionTable from './NutritionTable';
 export default function Summary() {
     return (
         <Box p={4} pt={0}>
-            <Flex justifyContent="space-between" alignItems="center">
-                <Heading size="lg" color="#fff" py={4}>Prep Time</Heading>
-                <Text size="md" color="#fff">(Servings : 4)</Text>
+            {/* <Flex justifyContent="space-between" alignItems="center">
+                <Heading size="lg" color="#424242" py={4}>Prep Time</Heading>
+                <Text size="md" color="#424242">(Servings : 4)</Text>
             </Flex>
-            <Table border="1px" color="#fff">
+            <Table border="1px" color="#424242">
                 <Thead>
                     <Tr>
                         <Th>Steps</Th>
@@ -54,13 +54,13 @@ export default function Summary() {
                         <Th >2hrs 40mins</Th>
                     </Tr>
                 </Tfoot>
-            </Table>
-            <Heading size="lg" color="#fff" py={4}>About</Heading>
-            <Text size="sm" color="#fff" >These whole wheat pancake are fluffy, light and soft. These best pancakes are made with whole wheat flour and without eggs. </Text>
-            <Heading size="lg" color="#fff" py={4}>Cook's Note</Heading>
-            <Text size="sm" color="#fff" >The skewers can also be cooked on the grill. Preheat an outdoor grill for medium heat and lightly oil the grate. Cook skewers on the preheated grill, turning occasionally, until an instant-read thermometer inserted into the center reads at least 165 degrees F (74 degrees C). </Text>
+            </Table> */}
+            <Heading size="lg" color="#424242" py={4}>About</Heading>
+            <Text size="sm" color="#424242" >These whole wheat pancake are fluffy, light and soft. These best pancakes are made with whole wheat flour and without eggs. </Text>
+            <Heading size="lg" color="#424242" py={4}>Cook's Note</Heading>
+            <Text size="sm" color="#424242" >The skewers can also be cooked on the grill. Preheat an outdoor grill for medium heat and lightly oil the grate. Cook skewers on the preheated grill, turning occasionally, until an instant-read thermometer inserted into the center reads at least 165 degrees F (74 degrees C). </Text>
             <Box my={8}>
-                <Grid templateColumns="repeat(3, 1fr)" color="#fff" >
+                <Grid templateColumns="repeat(3, 1fr)" color="#424242" >
                     <Stat >
                         <Flex flexDirection="column" alignItems="center">
                             <StatLabel>Views</StatLabel>
@@ -100,10 +100,10 @@ export default function Summary() {
                     </Stat>
                 </Grid>
             </Box>
-            <Heading size="lg" color="#fff" py={4}>Photos</Heading>
+            <Heading size="lg" color="#424242" py={4}>Photos</Heading>
 
 
-            <Grid templateColumns="repeat(2, 1fr)" color="#fff" rowGap="20px" gap="20px">
+            <Grid templateColumns="repeat(2, 1fr)" color="#424242" rowGap="20px" gap="20px">
                 {[{ img: "bacon", name: "Bacon and Eggs" }, { img: "curry", name: "Chicken Tandoori" }, { img: "eggs", name: "Sunny side up egg with Toast" }, { img: "fish", name: "Lemongrass salmon" }].map((food) => <Box>
                     <img className={classes.imageStyles} src={"/images/" + food.img + ".jfif"} alt={food.name} />
                 </Box>)}

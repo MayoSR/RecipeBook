@@ -1,0 +1,32 @@
+.recommendedCarousel{
+    overflow-x: scroll;
+    width: auto;
+}
+
+.recommendedFood{
+    padding:20px;
+    width: 100vw;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.recommendedFood img{
+    box-shadow: -1px -1px 13px 3px rgba(0,0,0,0.46);
+}
+
+.recommendedText{
+    bottom:20px;
+    padding: 10px;
+    left:20px;
+    right: 20px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0) 100%);
+}
+
+.recommendedStars{
+    top:20px;
+    padding: 10px;
+    left:20px;
+    right: 20px;
+    position: absolute;
+}

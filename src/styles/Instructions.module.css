@@ -5,11 +5,12 @@
 
 .boxDot{
     position: absolute;
-    background: #466033;
+    background: #F0A500;
     height:10px;
     width: 10px;
     border-radius: 50%;
     left:-5px;
+    top:-2px
 }
 
 .headerText{

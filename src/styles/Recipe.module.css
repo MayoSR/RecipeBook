@@ -1,12 +1,15 @@
 .imgBackdrop{
     position: fixed;
     top:-40px;
-    height:340px
+    height:340px;
+    width: 500px;
+    overflow: hidden;
 }
 
 .imgBackdrop img{
-    width: 100vw !important;
-    height:340px
+    height:340px;
+    width: 500px;
+    margin-left: -100px;
 }
 
 .foodName{
@@ -16,6 +19,7 @@
     right:0;
     bottom:0;
     height:340px;
+    width:100vw;
     z-index: 50;
     display: flex;
     justify-content: center;
@@ -37,7 +41,7 @@
     left:0;
     right:0;
     top:250px;
-    background: #212121;
+    background: #f5f5f5;
     z-index: 100;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -46,8 +50,8 @@
 }
 
 .selected{
-    color:white !important;
-    border-color: white !important;
+    color:#000 !important;
+    border-color: #000 !important;
 }
 
 .selected,.default{
@@ -58,7 +62,7 @@
 }
 
 .default{
-    color:#626262 !important;
-    border-color: #626262 !important;
+    color:#b1b1b1 !important;
+    border-color: #b1b1b1 !important;
     
 }

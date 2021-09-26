@@ -15,7 +15,7 @@ import {
 export default function NutritionTable() {
     return (
         <Box p={3}>
-            <Table border="1px" color="#fff" size="sm">
+            <Table border="1px" color="#424242" size="sm">
                 <Thead>
                     <Tr>
                         <Th>Type</Th>
