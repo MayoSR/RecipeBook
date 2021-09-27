@@ -16,7 +16,8 @@ import {
     Td,
     TableCaption,
 } from "@chakra-ui/react"
-import { BiArrowBack, BiShareAlt, BiChevronDown, BiStar } from "react-icons/bi";
+import { BiArrowBack, BiShareAlt, BiChevronDown, BiStarFi } from "react-icons/bi";
+import { AiFillStar } from "react-icons/ai";
 import NutritionTable from './NutritionTable';
 
 export default function Summary() {
@@ -80,7 +81,7 @@ export default function Summary() {
                                         <Text >4.5</Text>
                                     </Flex>
                                     <Flex flexDirection="column" alignItems="center" mt={3}>
-                                        <Icon w={4} h={4} as={BiStar} />
+                                        <Icon w={4} h={4} as={AiFillStar} color={"#FFD700"} />
                                         <Text fontSize="10px">/5</Text>
                                     </Flex>
 

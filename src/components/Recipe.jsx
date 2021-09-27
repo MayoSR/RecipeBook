@@ -1,4 +1,4 @@
-import { useState, React } from 'react'
+import { useState, React,useEffect } from 'react'
 import classes from '../styles/Recipe.module.css'
 import { Box, InputGroup, InputLeftElement, Input, InputRightElement, Icon, Flex, Grid, Heading, Text, IconButton, Button } from "@chakra-ui/react"
 import { BiArrowBack, BiShareAlt, BiHeart } from "react-icons/bi";
@@ -21,6 +21,10 @@ export default function Recipe(props) {
     const goBack = () =>{
         history.push("/")
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div>

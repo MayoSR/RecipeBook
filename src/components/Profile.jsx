@@ -1,4 +1,4 @@
-import { useState, React } from 'react'
+import { useState, React,useEffect } from 'react'
 import classes from '../styles/Profile.module.css'
 import {
     Box, InputGroup, InputLeftElement, Input, InputRightElement, Icon, Flex, Grid, Heading, Text, IconButton, Button, Center, Stat,
@@ -25,9 +25,13 @@ export default function Profile(props) {
         history.push("/")
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div>
-            <Flex justifyContent="space-between" p={3}>
+            <Flex justifyContent="space-between" p={"20px"}>
                 <Heading>Profile</Heading>
                 <Box>
                     <IconButton variant="outline" icon={<Icon w={5} h={5}  as={BiBell} />} mr={3} />

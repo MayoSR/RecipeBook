@@ -19,8 +19,8 @@ export default function FilterModal(props) {
                     <Heading size="md">Meal</Heading>
                     <Box mt={2}>
                         {["Breakfast", "Lunch", "Dinner", "Drinks", "Dessert", "Snacks", "Salad"].map((size) => (
-                            <Tag size="lg" variant="solid" mr={2} mb={3} bg="#DB6400"
-                            color="#fff">
+                            <Tag size="lg" variant="solid" mr={2} mb={3} bg="lightgrey"
+                            color="#fff" onClick={(e) => e.target.style.backgroundColor = "#DB6400"}>
                                 {size}
                             </Tag>
                         ))}
@@ -30,7 +30,7 @@ export default function FilterModal(props) {
                     <Heading size="md">Type</Heading>
                     <Box mt={2}>
                         {["Vegetarian", "Non Vegetarian", "Egg + Vegetarian", "Dairy + Vegetarian", "Vegan"].map((size) => (
-                            <Tag size="lg" variant="solid" mr={2} mb={3} bg="#DB6400"
+                            <Tag size="lg" variant="solid" mr={2} mb={3} bg="lightgrey"  onClick={(e) => e.target.style.backgroundColor = "#DB6400"}
                             color="#fff">
                                 {size}
                             </Tag>
@@ -41,7 +41,7 @@ export default function FilterModal(props) {
                     <Heading size="md">Cuisine</Heading>
                     <Box mt={2}>
                         {["Indian", "Chinese", "Greek", "Thai", "Mexican", "Indonesian", "Japanese", "American", "European", "Korean"].map((size) => (
-                            <Tag size="lg" variant="solid" mr={2} mb={3} bg="#DB6400"
+                            <Tag size="lg" variant="solid" mr={2} mb={3} bg="lightgrey"  onClick={(e) => e.target.style.backgroundColor = "#DB6400"}
                             color="#fff">
                                 {size}
                             </Tag>
@@ -81,7 +81,7 @@ export default function FilterModal(props) {
             </Box>
             <Flex justifyContent="center" mt={3}>
                 <Button bg="#DB6400"
-                        color="#fff" size="md" isFullWidth>
+                        color="#fff" size="md" isFullWidth  onClick={() => props.closeModal(false)} >
                     Apply
                 </Button>
             </Flex>

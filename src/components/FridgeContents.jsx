@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from "../styles/FridgeContents.module.css"
 import { Box, InputGroup, InputLeftElement, Input, InputRightElement, Icon, Flex, Text, IconButton, Heading, Divider, Avatar, Center, Tag, } from "@chakra-ui/react"
-import { BiHeart, BiTimeFive, BiBookmark, BiShareAlt } from "react-icons/bi";
+import { BiHeart, BiTimeFive, BiBookmark, BiUpload } from "react-icons/bi";
 import { AiOutlinePlus, AiOutlineMinus, AiFillStar } from "react-icons/ai";
-import { GiBacon, GiTomato, GiPotato, GiFriedFish, GiButter, } from "react-icons/gi";
+import { GiBacon, GiTomato, GiPotato, GiFriedFish, GiButter, GiMeat } from "react-icons/gi";
 import { useHistory } from 'react-router';
 import Ingredients from './subcomponents/Ingredients';
 import {
@@ -14,7 +14,7 @@ import {
     NumberDecrementStepper,
     useNumberInput,
     HStack,
-    Button
+    Button, Select
 } from "@chakra-ui/react"
 
 function MobileIncrement() {
@@ -49,10 +49,15 @@ export default function FridgeContents(props) {
         history.push("recipe")
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     const foods = [{ category: "vegetables", item: "Potato" }, { category: "vegetables", item: "Onion" }, { category: "vegetables", item: "Lime" }, { category: "vegetables", item: "Chilly", }, { category: "vegetables", item: "Tomato", }, { category: "meat & poultry", item: "Bacon", }, { category: "meat & poultry", item: "Beef", }, { category: "meat & poultry", item: "Fish", }, { category: "dairy", item: "Eggs", }, { category: "dairy", item: "Butter", }, { category: "dairy", item: "Cheese" }]
 
     return (
         <Box>
+
             <Heading size="lg" pl={"20px"} mt={3}>Recommended from your Fridge</Heading>
             <Flex className={classes.recommendedCarousel}>
                 {["bacon", "curry", "eggs"].map(food => {
@@ -80,13 +85,48 @@ export default function FridgeContents(props) {
                     </Box>
                 })}
             </Flex>
+
             <Box pt={1} bg="#fff" m={4} boxShadow="-1px -1px 13px 3px rgba(0,0,0,0.1);">
+                <Heading size="lg" pl={"20px"} mt={3} >Add a new Ingredient</Heading>
+                <Box p={3}>
+
+                    <InputGroup mb={2} size="md">
+                        <InputLeftElement
+                            pointerEvents="none"
+                            children={<GiMeat color="#DB6400" />}
+                        />
+                        <Input placeholder="Ingredient" />
+                    </InputGroup>
+
+                    <Flex mb={2}>
+                        <Box flex="0.38">
+                            <Input placeholder="Quantity" mr={3} />
+                        </Box>
+                        <Box flex="0.02">
+
+                        </Box>
+                        <Box flex="0.6">
+                            <Select placeholder="Select category" color="#a9a9a9">
+                                <option value="option1">Meat & Poultry</option>
+                                <option value="option2">Dairy</option>
+                                <option value="option3">Vegetables</option>
+                            </Select>
+                        </Box>
+
+                    </Flex>
+                    <Button leftIcon={<Icon as={BiUpload} w={5} h={5} color="#DB6400" />} variant="outline" mb={2}  color="#a9a9a9" isFullWidth>
+                        Choose Image (32x32)
+                    </Button>
+                    <Button isFullWidth variant="filled" bg="#DB6400" color="#fff">Add New Ingredient</Button>
+                </Box>
                 {/* <Flex justifyContent="space-between">
                     <Heading size="lg" pl={"20px"} my={3}>Your Fridge</Heading>
                 </Flex>
                 <Divider /> */}
                 {[...new Set(foods.map(food => food.category))].map(category => {
                     return <Box pb={2}>
+
+                        <Divider />
                         <Heading size="lg" pl={"20px"} my={3}>{category.charAt(0).toUpperCase() + category.slice(1)}</Heading>
                         <Box px={"20px"}>
                             {foods.filter(food => food.category === category).map(food => {
@@ -105,13 +145,9 @@ export default function FridgeContents(props) {
                                 </Box>
                             })}
                         </Box>
-                        <Divider />
                     </Box>
                 })}
-                <Box p={3}>
 
-                    <Button isFullWidth variant="filled" bg="#f5f5f5">New Ingredient</Button>
-                </Box>
             </Box>
             <br></br>
             <br></br>
