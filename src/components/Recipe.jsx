@@ -58,7 +58,7 @@ export default function Recipe(props) {
                 </Box>
             </div>
             <div className={classes.imgForedrop}>
-                <Box bg="#f5f5f5" borderTopRadius="30px" mt={3}>
+                <Box bg="#f5f5f5" borderTopRadius="30px">
                     <Grid templateColumns="repeat(4, 1fr)" rowGap={5} p={3}>
                         {["About", "Ingredients", "Prepare","Nutrition"].map((tab) => {
                             return (
@@ -66,7 +66,7 @@ export default function Recipe(props) {
                                     variant="link"
                                     borderBottom="2px"
                                     borderRadius="0"
-                                    pb={3}
+                                    py={3}
                                     className={activeTab === tab ? classes.selected : classes.default}
                                     onClick={() => setActiveTab(tab)}>
                                     {tab}

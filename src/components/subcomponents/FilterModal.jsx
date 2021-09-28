@@ -2,17 +2,27 @@ import {
     Box, Flex, Heading, IconButton, Slider, SliderFilledTrack,
     SliderThumb, SliderTrack, Tag, Text,Button,Divider
 } from "@chakra-ui/react";
-import React from 'react';
+import React, { useState } from 'react';
 import { MdClose } from "react-icons/md";
 import classes from '../../styles/FilterModal.module.css';
 
 
 export default function FilterModal(props) {
+
+    const [modalAnimationState,setModalAnimationState] = useState(true)
+
+    const modalClosingState = () =>{
+        setModalAnimationState(false)
+        setTimeout(() => props.closeModal(false),500)
+        
+    }
+
+
     return (
-        <Box className={classes.modalClass} p={4}>
+        <Box className={modalAnimationState ? classes.modalClass : classes.modalClassExit } p={4}>
             <Flex justifyContent="space-between" alignItems="center">
                 <Heading>Filter</Heading>
-                <IconButton size="sm" as={MdClose} onClick={() => props.closeModal(false)} />
+                <IconButton size="sm" as={MdClose} onClick={modalClosingState} />
             </Flex>
             <Box mt={3}>
                 <Box mt={3}>
