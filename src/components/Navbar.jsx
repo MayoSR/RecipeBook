@@ -42,7 +42,7 @@ export default function Navbar() {
             </Box>
             <Box mt={1}>
                 <Flex alignItems="center" flexDirection="column" className={currentTab === "Profile" ? classes.activeButton : classes.inactive}>
-                    <Avatar width="26px" height="26px" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" onClick={() => changeRoute("profile")} mb={2}/>
+                    <Avatar width="26px" height="26px" name="Charles White" src="/images/profile/person.jfif" onClick={() => changeRoute("profile")} mb={2}/>
                     <Text className={classes.buttonText} fontSize="xs">Profile</Text>
                 </Flex>
             </Box>

@@ -58,7 +58,7 @@ export default function FridgeContents(props) {
     return (
         <Box>
 
-            <Heading size="lg" pl={"20px"} mt={3}>Recommended from your Fridge</Heading>
+            <Heading size="lg" pl={"20px"} pt={3}>Recommended from your Fridge</Heading>
             <Flex className={classes.recommendedCarousel}>
                 {["bacon", "curry", "eggs"].map(food => {
                     return <Box className={classes.recommendedFood}>
@@ -123,30 +123,33 @@ export default function FridgeContents(props) {
                     <Heading size="lg" pl={"20px"} my={3}>Your Fridge</Heading>
                 </Flex>
                 <Divider /> */}
-                {[...new Set(foods.map(food => food.category))].map(category => {
-                    return <Box pb={2}>
+                <Box  className={classes.fridgeContent}>
 
-                        <Divider />
-                        <Heading size="lg" pl={"20px"} my={3}>{category.charAt(0).toUpperCase() + category.slice(1)}</Heading>
-                        <Box px={"20px"}>
-                            {foods.filter(food => food.category === category).map(food => {
+                    {[...new Set(foods.map(food => food.category))].map(category => {
+                        return <Box pb={2}>
 
-                                return <Box mb={3}>
-                                    <Flex justifyContent="space-between" alignItems="center">
-                                        <Flex alignItems="center">
-                                            <Box mr={2} height="30px" width="30px" borderRadius="5px" overflow="hidden">
+                            <Divider />
+                            <Heading size="lg" pl={"20px"} my={3}>{category.charAt(0).toUpperCase() + category.slice(1)}</Heading>
+                            <Box px={"20px"}>
+                                {foods.filter(food => food.category === category).map(food => {
 
-                                                <img src={"/images/fridge/" + food.item.toLowerCase() + ".jfif"} alt="img" />
-                                            </Box>
-                                            <Text fontSize="md">{food.item}</Text>
+                                    return <Box mb={3}>
+                                        <Flex justifyContent="space-between" alignItems="center">
+                                            <Flex alignItems="center">
+                                                <Box mr={2} height="30px" width="30px" borderRadius="5px" overflow="hidden">
+
+                                                    <img src={"/images/fridge/" + food.item.toLowerCase() + ".jfif"} alt="img" />
+                                                </Box>
+                                                <Text fontSize="md">{food.item}</Text>
+                                            </Flex>
+                                            <MobileIncrement />
                                         </Flex>
-                                        <MobileIncrement />
-                                    </Flex>
-                                </Box>
-                            })}
+                                    </Box>
+                                })}
+                            </Box>
                         </Box>
-                    </Box>
-                })}
+                    })}
+                </Box>
 
             </Box>
             <br></br>

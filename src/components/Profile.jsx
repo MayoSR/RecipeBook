@@ -41,10 +41,10 @@ export default function Profile(props) {
             <Center flexDirection="column" height="250px" className={classes.profileBg}>
                 <Center flexDirection="column" className={classes.overlayBox}>
 
-                    <Center p={1} flexDirection="column" height="105px" width="105px" bg="linear-gradient(45deg, rgba(70,96,51,1) 0%, rgba(108,255,0,1) 100%);" borderRadius="50%">
-                        <img alt="Dan Abrahmov" src="https://bit.ly/dan-abramov" className={classes.profileImg} />
+                    <Center p={1} flexDirection="column" height="105px" width="105px" bg="linear-gradient(45deg, #DB6400, #cf7500);" borderRadius="50%">
+                        <img alt="Charles White" src="/images/profile/person.jfif" className={classes.profileImg} />
                     </Center>
-                    <Heading fontSize="lg" mt={3}>Dan Abrahmov</Heading>
+                    <Heading fontSize="lg" mt={3}>Charles White</Heading>
                 </Center>
             </Center>
             <Divider />
@@ -87,6 +87,9 @@ export default function Profile(props) {
                     <img src={"images/" + food.img + ".jfif"} style={{ objectFit: "cover", height: "100px" }} alt={food.name} />
                 </Box>)}
             </Grid>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
     )
 }

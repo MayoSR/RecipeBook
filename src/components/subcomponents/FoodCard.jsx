@@ -51,10 +51,10 @@ export default function FoodCard(props) {
             <Box py={3} px={3}>
                 <Flex justifyContent="space-between" alignItems="center">
                     <Flex alignItems="center">
-                        <Avatar size="sm" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mr={2} />
+                        <Avatar size="sm" name="Charles White" src="/images/profile/person.jfif" mr={2} />
                         <Flex flexDirection="column">
                             <Text fontSize="xs">Recipe by</Text>
-                            <Heading fontSize="sm">Dan Abrahmov</Heading>
+                            <Heading fontSize="sm">Charles White</Heading>
                         </Flex>
                     </Flex>
                     <Flex>

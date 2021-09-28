@@ -1,6 +1,18 @@
 .recommendedCarousel{
     overflow-x: scroll;
     width: auto;
+    animation: cardFadeIn 1s;
+}
+
+
+
+@keyframes cardFadeIn {
+    from{
+        opacity:0
+    }
+    to{
+        opacity:1
+    }
 }
 
 .recommendedFood{
@@ -29,4 +41,8 @@
     left:20px;
     right: 20px;
     position: absolute;
+}
+
+.fridgeContent{
+    animation: cardFadeIn 1s;
 }
