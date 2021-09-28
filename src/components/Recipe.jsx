@@ -3,23 +3,20 @@ import classes from '../styles/Recipe.module.css'
 import { Box, InputGroup, InputLeftElement, Input, InputRightElement, Icon, Flex, Grid, Heading, Text, IconButton, Button } from "@chakra-ui/react"
 import { BiArrowBack, BiShareAlt, BiHeart } from "react-icons/bi";
 import { Switch, useHistory,Route,useRouteMatch } from 'react-router';
-import Summary from './subcomponents/Summary';
+import About from './subcomponents/About'
 import Ingredients from './subcomponents/Ingredients';
 import Instructions from './subcomponents/Instructions';
+import NutritionTable from './subcomponents/NutritionTable';
 
 export default function Recipe(props) {
 
-    let { path, url } = useRouteMatch();
-    const [activeTab, setActiveTab] = useState(path.split("/")[2].charAt(0).toUpperCase()+path.split("/")[2].slice(1))
-    const history = useHistory()
+    const [activeTab, setActiveTab] = useState("About")
 
-    const changeTab = (tab) => {
-        setActiveTab(tab)
-        history.push(tab.toLowerCase())
-    }
+    const components = {"About" : <About />,"Ingredients":<Ingredients />,"Prepare":<Instructions />,"Nutrition":<NutritionTable />,}
 
     const goBack = () =>{
-        history.push("/")
+        props.closeRecipe(false)
+        document.body.style.overflow = "auto"
     }
 
     useEffect(() => {
@@ -27,7 +24,7 @@ export default function Recipe(props) {
     }, [])
 
     return (
-        <div>
+        <div className={classes.slideUpAnimation}>
             <div className={classes.navBox}>
 
                 <Flex justifyContent="space-between" alignItems="center" p={3}>
@@ -71,7 +68,7 @@ export default function Recipe(props) {
                                     borderRadius="0"
                                     pb={3}
                                     className={activeTab === tab ? classes.selected : classes.default}
-                                    onClick={() => changeTab(tab)}>
+                                    onClick={() => setActiveTab(tab)}>
                                     {tab}
                                 </Button>
                             )
@@ -79,7 +76,7 @@ export default function Recipe(props) {
 
                     </Grid>
                     <Box>
-                        {props.component}
+                        {components[activeTab]}
                     </Box>
                 </Box>
                 

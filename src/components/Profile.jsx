@@ -12,7 +12,7 @@ import {
 import { BiBell, } from "react-icons/bi";
 import { BsGear, } from "react-icons/bs";
 import { Switch, useHistory, Route, useRouteMatch } from 'react-router';
-import Summary from './subcomponents/Summary';
+import About from './subcomponents/About';
 import Ingredients from './subcomponents/Ingredients';
 import Instructions from './subcomponents/Instructions';
 

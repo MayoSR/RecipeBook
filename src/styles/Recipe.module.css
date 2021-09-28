@@ -1,9 +1,29 @@
 .imgBackdrop{
-    position: fixed;
+    position: absolute;
     top:-40px;
     height:340px;
     width: 500px;
     overflow: hidden;
+}
+
+.slideUpAnimation{
+    position: absolute;
+    z-index: 100;
+    top:0;
+    left:0;
+    right:0;
+    height: 100vh;
+    animation: cardSlideIn 0.75s;
+    overflow-y: scroll;
+}
+
+@keyframes cardSlideIn {
+    from{
+        top:800px;
+    }
+    to{
+        top: 0;
+    }
 }
 
 .imgBackdrop img{

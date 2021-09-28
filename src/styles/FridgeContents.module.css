@@ -1,9 +1,8 @@
 .recommendedCarousel{
     overflow-x: scroll;
     width: auto;
-    animation: cardFadeIn 1s;
+    animation: cardFadeIn 1.5s;
 }
-
 
 
 @keyframes cardFadeIn {
@@ -43,6 +42,15 @@
     position: absolute;
 }
 
-.fridgeContent{
-    animation: cardFadeIn 1s;
+.closingHeightBox{
+    animation: cardSlideIn 1s;
+}
+
+@keyframes cardSlideIn {
+    from{
+        height:1000px;
+    }
+    to{
+        height:0px;
+    }
 }

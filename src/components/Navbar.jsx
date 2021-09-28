@@ -15,7 +15,7 @@ export default function Navbar() {
     }
 
     return (
-        <Flex className={classes.navbar} minW={"100vw"} justifyContent="space-evenly" alignItems="center">
+        <Flex className={classes.navbar} width={"100vw"} justifyContent="space-evenly" alignItems="center">
             <Box mt={1}>
                 <Flex alignItems="center" flexDirection="column" className={currentTab === "home" ? classes.activeButton : classes.inactive}>
                     <IconButton

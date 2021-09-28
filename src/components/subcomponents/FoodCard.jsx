@@ -10,7 +10,8 @@ export default function FoodCard(props) {
     let history = useHistory()
 
     const showRecipe = () => {
-        history.push("recipe")
+        props.openRecipe(true)
+        document.body.style.overflow = "hidden"
     }
 
     return (

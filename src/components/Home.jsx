@@ -6,12 +6,14 @@ import { GiHamburger, GiCoffeePot, GiNoodles } from "react-icons/gi";
 import { FaIceCream } from "react-icons/fa";
 import FoodCard from './subcomponents/FoodCard';
 import FilterModal from './subcomponents/FilterModal';
+import Recipe from './Recipe';
 
 export default function Home() {
 
 
     const [isModalOpen, setModalStatus] = useState(false)
     const [selectedCategory, setSelectedCategory] = useState("Food")
+    const [isRecipeOpen,setRecipeStatus] = useState(false)
 
     const openModal = () => {
         setModalStatus(true)
@@ -49,13 +51,14 @@ export default function Home() {
                 <Flex justifyContent="center">
 
                     <Box className={classes.foodCardFadeIn}>
-                        {[{ img: "bacon", name: "Bacon and Eggs" }, { img: "curry", name: "Chicken Tandoori" }, { img: "eggs", name: "Sunny side up egg with Toast" }, { img: "fish", name: "Lemongrass salmon" }, { img: "pancake", name: "Pancake with maple syrup" }, { img: "pizza", name: "Farmhouse pizza" }, { img: "ramen", name: "Hida Takayama ramen" }, { img: "taco", name: "Mexican chicken tacos" }, { img: "waffle", name: "Waffles and whipped cream" },].map((food) => <FoodCard img={"images/" + food.img + ".jfif"} name={food.name} />)}
+                        {[{ img: "bacon", name: "Bacon and Eggs" }, { img: "curry", name: "Chicken Tandoori" }, { img: "eggs", name: "Sunny side up egg with Toast" }, { img: "fish", name: "Lemongrass salmon" }, { img: "pancake", name: "Pancake with maple syrup" }, { img: "pizza", name: "Farmhouse pizza" }, { img: "ramen", name: "Hida Takayama ramen" }, { img: "taco", name: "Mexican chicken tacos" }, { img: "waffle", name: "Waffles and whipped cream" },].map((food) => <FoodCard openRecipe={setRecipeStatus} img={"images/" + food.img + ".jfif"} name={food.name} />)}
                     </Box>
                 </Flex>
 
             </Box>
             <br></br>
             <br></br>
+            {isRecipeOpen ? <Recipe closeRecipe={setRecipeStatus} /> : <></>}
         </Box>
     )
 }

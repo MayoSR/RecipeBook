@@ -18,7 +18,7 @@
 
 .foodTags{
     position: absolute;
-    z-index:4000;
+    z-index:20;
     right:0;
     top:10px
 }

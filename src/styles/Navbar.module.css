@@ -1,5 +1,5 @@
 .navbar{
-    z-index: 5000;
+    z-index: 10000;
     position: fixed;
     bottom: -1px;
     left:0;
