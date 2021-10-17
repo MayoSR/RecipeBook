@@ -6,15 +6,15 @@ import { BiArrowBack, BiShareAlt, BiHeart } from "react-icons/bi";
 export default function Instructions() {
     return (
         <Box p={3} ml={1} mt={2} color="#424242">
-            {[1, 2, 3, 4].map(num => {
+            {[" Let the bacon sit out on the counter to warm up for 10-15 minutes before trying to separate the slices. The bacon will pull apart more easily when it is a little warm.", "Fry bacon in a pan on medium-low flame until they are crispy. Transfer them into a plate.", "Use the same pan to cook eggs. Crack eggs in the pan and cook them as you like; sunny side up. Cover the pan so that the egg cooks properly. Slice cherry tomatoes and cook in the pan at the same time.", "Add seasoning and garnish with chopped fresh parsley. Serve bacon and eggs hot.",].map((step, ind) => {
 
                 return <Box borderLeft="1px dotted #F0A500" pl={5} pb={5} className={classes.stepBox}>
                     <Box className={classes.boxDot} ></Box>
                     <Flex className={classes.headerText} justifyContent="space-between" alignItems="center">
-                        <Heading size="sm"> Step {num}/4</Heading>
+                        <Heading size="sm"> Step {ind + 1}/4</Heading>
                         <Checkbox size="md" colorScheme="green" />
                     </Flex>
-                    <Text pt={6} fontSize="sm"> Place the soy sauce, olive oil, lemon juice, Worcestershire sauce, garlic powder, basil, parsley, and pepper in a blender. Add hot pepper sauce and garlic, if desired. Blend on high speed for 30 seconds until thoroughly mixed.</Text >
+                    <Text pt={6} fontSize="sm">{step} </Text >
                 </Box>
             })}
             <br></br>

@@ -24,7 +24,7 @@ export default function About() {
     return (
         <Box p={4} pt={0}>
             <Heading size="lg" color="#424242" py={4}>About</Heading>
-            <Text size="sm" color="#424242" >These whole wheat pancake are fluffy, light and soft. These best pancakes are made with whole wheat flour and without eggs. </Text>
+            <Text size="sm" color="#424242" >Bacon and Eggs is a popular and most loves Continental breakfast that is extremely fulfilling and delicious.  </Text>
             <Heading size="lg" color="#424242" py={4}>Cook's Note</Heading>
             <Text size="sm" color="#424242" >The skewers can also be cooked on the grill. Preheat an outdoor grill for medium heat and lightly oil the grate. Cook skewers on the preheated grill, turning occasionally, until an instant-read thermometer inserted into the center reads at least 165 degrees F (74 degrees C). </Text>
             <Box my={8}>
